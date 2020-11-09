@@ -1,1 +1,14 @@
-/* Mise en forme de la page via FlexBox */
+/* Définition de la police Raleway */
+@font-face {
+  font-family: "Raleway";
+  src: url("/polices/raleway/raleway-regular-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/raleway/raleway-regular-webfont.svg") format("svg");
+  src: url("/polices/raleway/raleway-regular-webfont.woff") format("woff");
+  src: url("/polices/raleway/Raleway-Regular.ttf") format("truetype");
+}
+
+/*Utilisation de la police dans tout le document */
+* {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
