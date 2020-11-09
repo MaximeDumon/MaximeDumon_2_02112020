@@ -3,72 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <title>Réservia</title>
+    <!-- Utilisation de la librairie Font Awesome pour les icônes -->
+    <script
+      src="https://kit.fontawesome.com/fdd83998d8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Réservia - Pour des vacances de rêve</title>
   </head>
   <body>
     <!-- Header contenant les liens de navigations, les filtres, logo et description et le formulaire de recherche -->
     <header>
       <!-- En-tête conenant le logo et la descritpion du site ainsi que le menu de navigation -->
-      <img src="./images/logo/Reservia.svg" alt="Logo Réservia" />
-      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-      <p>En plein centre ville ou en pleine nature</p>
+      <img src="/images/logo/Reservia.svg" alt="Logo Réservia" />
       <nav>
         <ul>
           <li><a href="#hebergements">Hébergements</a></li>
           <li><a href="#activites">Activités</a></li>
-          <li><a href="#">S'inscrire</a></li>
         </ul>
       </nav>
-      <!-- Formulaire de rechercher, logo de géolocalisation et bouton -->
-      <img src="#" alt="Logo géolocalisation" />
+      <a href="#inscription">S'inscrire</a>
+      <!-- Titre et description du site -->
+      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+      <p>En plein centre ville ou en pleine nature</p>
+      <!-- Barre de recherche -->
+      <i class="fas fa-map-marker-alt"></i>
+      <!-- Formulaire de recherche, le champ 'name' est omis dans la mesure où rien ne sera effectivement envoyé -->
       <form action="#">
         <input type="text" />
       </form>
-      <button type="button">Rechercher</button>
+      <!-- Utilisation d'un bouton plutôt que d'un <input> pour pouvoir afficher l'icône plutôt que le texte lors d'un affichage sur mobile -->
+      <button type="button" value="Rechercher"></button>
       <!-- Filtres -->
       <p>Filtres</p>
-      <img src="#" alt="Logo éco" />
-      <p>économique</p>
-      <img src="#" alt="Logo famille" />
+      <i class="fas fa-money-bill-wave"></i>
+      <p>Economique</p>
+      <i class="fas fa-child"></i>
       <p>Familial</p>
-      <img src="#" alt="Logo romance" />
+      <i class="fas fa-heart"></i>
       <p>Romantique</p>
-      <img src="#" alt="Logo animaux" />
+      <i class="fas fa-dog"></i>
       <p>Animaux autorisés</p>
-      <!-- Informations -->
-      <img src="#" alt="Logo information" />
+      <!-- Résultat de la recherche -->
+      <i class="fas fa-info-circle"></i>
       <p>Plus de 500 logements sont disponibles dans cette ville</p>
     </header>
-    <!--Section contenant les résultats de la recherche -->
-    <section id="hebergements">
-      <h2>Hébergements</h2>
-    </section>
-    <!-- COmposant contenant les logements les plus populaires -->
-    <aside>
-      <h2>Les plus populaires</h2>
-    </aside>
-    <!-- Section contenant les activités disponibles -->
-    <section id="activites">
-      <h2>Activités</h2>
-    </section>
-    <!-- Footer contenant les informations de contact, légales etc... -->
-    <footer>
-      <h2>A propos</h2>
-      <ul>
-        <li>Fonctionnement du site</li>
-        <li>Conditions générales de vente</li>
-        <li>Données et confidentialité</li>
-      </ul>
-      <h2>Nos hébergements</h2>
-      <ul>
-        <li>Charte qualité</li>
-        <li>Soumettre votre hotel</li>
-      </ul>
-      <h2>Assistance</h2>
-      <ul>
-        <li>Centre d'aide</li>
-        <li>Nous contacter</li>
-      </ul>
-    </footer>
+    <!-- Première section contenant les hébergements -->
+    <section></section>
+    <!-- Deuxième section contenant les activités -->
+    <section></section>
+    <!-- Troisième section contenant les hébergements les plus polulaires -->
+    <section></section>
+    <!-- Footer contenant les liens d'informations, légaux, de contact etc ... -->
+    <footer></footer>
   </body>
 </html>
