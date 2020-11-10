@@ -1,4 +1,4 @@
-/* Définition de la police Raleway */
+/* Définition de la police Raleway pour la version normale */
 @font-face {
   font-family: "Raleway";
   src: url("/polices/raleway/raleway-regular-webfont.eot")
@@ -8,7 +8,135 @@
   src: url("/polices/raleway/Raleway-Regular.ttf") format("truetype");
 }
 
+/* Pour la version en gras */
+@font-face{
+  font-family: "Raleway";
+  src: url("/polices/raleway/raleway-bold-webfont.woff") format("woff");
+  font-weight: bold;
+}
+
 /*Utilisation de la police dans tout le document */
 * {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
+
+/* Breakpoint à utiliser en prenant l'iphone 8 comme référence: 400px */
+@media (max-width: 1000px) {
+  #entete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Propriétés de la liste de navigation */
+  nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: blue;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-around;
+  }
+
+  li{
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Selectionne uniquement les tags utilisés pour la navigation */
+  li a{
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    border-bottom: solid;
+    border-color: grey;
+  }
+  a:hover{
+    border-color: blue;
+  }
+
+  /* Passage de la barre de navigation sous le logo + lien d'inscription */
+  nav:nth-child(2) {
+    order: 3;
+  }
+
+  /* Titre du header */
+  h1{
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  /* Description et résultat de la recherche */
+  .description{
+    font-size: large;
+  }
+
+  /* Formulaire de recherche */
+  #recherche{
+    display: flex;
+    width: 100%;
+    border-style: groove;
+    justify-content: space-around;
+  }
+
+  .fa-map-marker-alt{
+    background-color: gray;
+    width: 20%;
+  }
+
+  input{
+    border-style: groove;
+    border-width: 1px;
+    width: 80%;
+  }
+
+  /* Filtres */
+  h2{
+    font-size: medium;
+  }
+
+  #filtres{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .filtre{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 2em;
+    border-style: groove;
+    border-width: 2px;
+    margin: 5px 10px 5px 10px;
+  }
+
+  .filtre p{
+    margin: 10px 20px 10px 20px;
+  }
+
+  .fas{
+    background-color: #0065FC;
+  }
+
+  /* Bandeau d'information / résultats de la recherche */
+  #resultats{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Déplacer la barre de navigation */

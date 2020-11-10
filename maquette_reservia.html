@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <!-- Utilisation de la librairie Font Awesome pour les icônes -->
     <script
@@ -14,38 +15,54 @@
     <!-- Header contenant les liens de navigations, les filtres, logo et description et le formulaire de recherche -->
     <header>
       <!-- En-tête conenant le logo et la descritpion du site ainsi que le menu de navigation -->
-      <img src="/images/logo/Reservia.svg" alt="Logo Réservia" />
-      <nav>
-        <ul>
-          <li><a href="#hebergements">Hébergements</a></li>
-          <li><a href="#activites">Activités</a></li>
-        </ul>
-      </nav>
-      <a href="#inscription">S'inscrire</a>
+      <div id="entete">
+        <img src="/images/logo/Reservia.svg" alt="Logo Réservia" />
+        <nav>
+          <ul>
+            <li><a class="lien_nav" href="#hebergements">Hébergements</a></li>
+            <li><a class="lien_nav" href="#activites">Activités</a></li>
+          </ul>
+        </nav>
+        <a href="#inscription_page">S'inscrire</a>
+      </div>
       <!-- Titre et description du site -->
       <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-      <p>En plein centre ville ou en pleine nature</p>
+      <p class="description">En plein centre ville ou en pleine nature</p>
       <!-- Barre de recherche -->
-      <i class="fas fa-map-marker-alt"></i>
-      <!-- Formulaire de recherche, le champ 'name' est omis dans la mesure où rien ne sera effectivement envoyé -->
-      <form action="#">
-        <input type="text" />
-      </form>
-      <!-- Utilisation d'un bouton plutôt que d'un <input> pour pouvoir afficher l'icône plutôt que le texte lors d'un affichage sur mobile -->
-      <button type="button" value="Rechercher"></button>
+      <div id="recherche">
+        <i class="fas fa-map-marker-alt"></i>
+        <!-- Formulaire de recherche, le champ 'name' est omis dans la mesure où rien ne sera effectivement envoyé -->
+        <form action="#">
+          <input type="text" />
+        </form>
+        <!-- Utilisation d'un bouton plutôt que d'un <input> pour pouvoir afficher l'icône plutôt que le texte lors d'un affichage sur mobile -->
+        <button type="button" value="Rechercher"></button>
+      </div>
       <!-- Filtres -->
-      <p>Filtres</p>
-      <i class="fas fa-money-bill-wave"></i>
-      <p>Economique</p>
-      <i class="fas fa-child"></i>
-      <p>Familial</p>
-      <i class="fas fa-heart"></i>
-      <p>Romantique</p>
-      <i class="fas fa-dog"></i>
-      <p>Animaux autorisés</p>
+      <h2>Filtres</h2>
+      <div id="filtres">
+        <div class="filtre">
+          <i class="fas fa-money-bill-wave"></i>
+          <p>Economique</p>
+        </div>
+        <div class="filtre">
+          <i class="fas fa-child"></i>
+          <p>Familial</p>
+        </div>
+        <div class="filtre">
+          <i class="fas fa-heart"></i>
+          <p>Romantique</p>
+        </div>
+        <div class="filtre">
+          <i class="fas fa-dog"></i>
+          <p>Animaux autorisés</p>
+        </div>
+      </div>
       <!-- Résultat de la recherche -->
-      <i class="fas fa-info-circle"></i>
-      <p>Plus de 500 logements sont disponibles dans cette ville</p>
+      <div id="resultats">
+        <i class="fas fa-info-circle"></i>
+        <p class="description">Plus de 500 logements sont disponibles dans cette ville</p>
+      </div>
     </header>
     <!-- Première section contenant les hébergements -->
     <section id="hebergements">
