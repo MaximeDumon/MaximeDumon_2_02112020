@@ -21,7 +21,7 @@
 }
 
 /* Breakpoint à utiliser en prenant l'iphone 8 comme référence: 400px */
-@media (max-width: 1000px) {
+@media (max-width: 400px) {
   #entete {
     display: flex;
     flex-wrap: wrap;
