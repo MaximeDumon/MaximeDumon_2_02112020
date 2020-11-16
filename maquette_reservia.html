@@ -16,18 +16,24 @@
     <header>
       <!-- En-tête conenant le logo et la descritpion du site ainsi que le menu de navigation -->
       <div id="entete">
-        <img src="/images/logo/Reservia.svg" alt="Logo Réservia" />
+        <div id="logo">
+          <img src="/images/logo/Reservia.svg" alt="Logo Réservia" />
+        </div>
+        <div id="inscription">
+          <a class="inscription_link" href="#inscription_page">S'inscrire</a>
+        </div>
         <nav>
           <ul>
             <li><a class="lien_nav" href="#hebergements">Hébergements</a></li>
             <li><a class="lien_nav" href="#activites">Activités</a></li>
           </ul>
         </nav>
-        <a href="#inscription_page">S'inscrire</a>
       </div>
       <!-- Titre et description du site -->
-      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-      <p class="description">En plein centre ville ou en pleine nature</p>
+      <div id="description">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+      </div>
       <!-- Barre de recherche -->
       <div id="recherche">
         <i class="fas fa-map-marker-alt"></i>
@@ -36,32 +42,32 @@
           <input type="text" />
         </form>
         <!-- Utilisation d'un bouton plutôt que d'un <input> pour pouvoir afficher l'icône plutôt que le texte lors d'un affichage sur mobile -->
-        <button type="button" value="Rechercher"></button>
+        <button type="button" value="Marseille, France">Rechercher</button>
       </div>
       <!-- Filtres -->
-      <h2>Filtres</h2>
       <div id="filtres">
+        <h2>Filtres</h2>
         <div class="filtre">
-          <i class="fas fa-money-bill-wave"></i>
+          <i class="fas logo_filtre fa-money-bill-wave"></i>
           <p>Economique</p>
         </div>
         <div class="filtre">
-          <i class="fas fa-child"></i>
+          <i class="fas logo_filtre fa-child"></i>
           <p>Familial</p>
         </div>
         <div class="filtre">
-          <i class="fas fa-heart"></i>
+          <i class="fas logo_filtre fa-heart"></i>
           <p>Romantique</p>
         </div>
         <div class="filtre">
-          <i class="fas fa-dog"></i>
+          <i class="fas logo_filtre fa-dog"></i>
           <p>Animaux autorisés</p>
         </div>
       </div>
       <!-- Résultat de la recherche -->
       <div id="resultats">
         <i class="fas fa-info-circle"></i>
-        <p class="description">Plus de 500 logements sont disponibles dans cette ville</p>
+        <p>Plus de 500 logements sont disponibles dans cette ville</p>
       </div>
     </header>
     <!-- Première section contenant les hébergements -->

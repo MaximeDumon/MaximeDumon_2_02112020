@@ -9,9 +9,13 @@
 }
 
 /* Pour la version en gras */
-@font-face{
+@font-face {
   font-family: "Raleway";
+  src: url("/polices/raleway/raleway-bold-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/raleway/raleway-bold-webfont.svg") format("svg");
   src: url("/polices/raleway/raleway-bold-webfont.woff") format("woff");
+  src: url("/polices/raleway/Raleway-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
@@ -20,123 +24,116 @@
   font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
-/* Breakpoint à utiliser en prenant l'iphone 8 comme référence: 400px */
-@media (max-width: 400px) {
+/* Breakpoint à utiliser en prenant l'iphone 8 comme référence: 375px */
+@media (max-width: 375px) {
+  /* Entete contenant le logo, le lien d'inscription et la barre de navigation */
+  header {
+    padding: 10px 10px 10px 10px;
+  }
   #entete {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 100%;
-    justify-content: space-between;
   }
-
-  /* Propriétés de la liste de navigation */
-  nav{
+  #logo {
+    flex: auto;
+  }
+  #inscription {
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+  }
+  nav {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
-    background-color: blue;
   }
-
-  ul {
+  nav ul {
     display: flex;
-    width: 100%;
+    flex: auto;
     list-style-type: none;
-    justify-content: space-around;
+    padding: 0%;
   }
-
-  li{
+  li {
+    flex: 1 1 50%;
     display: flex;
-    width: 100%;
-    align-items: center;
+    justify-content: center;
   }
-
-  /* Selectionne uniquement les tags utilisés pour la navigation */
-  li a{
-    display: flex;
-    text-decoration: none;
-    width: 100%;
-    border-bottom: solid;
-    border-color: grey;
-  }
-  a:hover{
-    border-color: blue;
-  }
-
-  /* Passage de la barre de navigation sous le logo + lien d'inscription */
-  nav:nth-child(2) {
-    order: 3;
-  }
-
-  /* Titre du header */
-  h1{
+  /* Description avec le titre principal et le message d'acceuil */
+  h1 {
     font-size: x-large;
-    font-weight: bold;
   }
-
-  /* Description et résultat de la recherche */
-  .description{
-    font-size: large;
-  }
-
-  /* Formulaire de recherche */
-  #recherche{
-    display: flex;
-    width: 100%;
-    border-style: groove;
-    justify-content: space-around;
-  }
-
-  .fa-map-marker-alt{
-    background-color: gray;
-    width: 20%;
-  }
-
-  input{
-    border-style: groove;
-    border-width: 1px;
-    width: 80%;
-  }
-
-  /* Filtres */
-  h2{
+  #description {
     font-size: medium;
   }
-
-  #filtres{
+  /* Le formulaire de recherche */
+  #recherche {
     display: flex;
+    align-items: stretch;
     justify-content: flex-start;
-    align-items: center;
-    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  /* Icône de recherche */
+  .fa-map-marker-alt {
+    padding: 15px 15px 15px 15px;
+    background-color: #f2f2f2;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    flex: 1 1 auto;
+  }
+  /* Bouton de recherche */
+  form {
+    display: flex;
+  }
+  form input {
+    border: none;
+  }
+  button {
+    flex: 1 1 auto;
+    background-color: #0065fc;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  /* Les filtres */
+  #filtres {
+    display: flex;
     flex-wrap: wrap;
   }
-
-  .filtre{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    font-weight: bold;
-    border-radius: 2em;
-    border-style: groove;
-    border-width: 2px;
-    margin: 5px 10px 5px 10px;
-  }
-
-  .filtre p{
-    margin: 10px 20px 10px 20px;
-  }
-
-  .fas{
-    background-color: #0065FC;
-  }
-
-  /* Bandeau d'information / résultats de la recherche */
-  #resultats{
-    display: flex;
-    align-items: center;
+  #filtres h2 {
     width: 100%;
-    justify-content: space-between;
+  }
+  .filtre {
+    display: flex;
+    align-items: center;
+    margin: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: #f2f2f2;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .logo_filtre {
+    padding-right: 10px;
+    color: #0065fc;
+    background-color: orange;
+  }
+  .filtre p {
+    font-weight: bold;
+  }
+  /* Le résulat de la recherche */
+  #resultats {
+    /* A supprimer */
+    border-style: solid;
+    border-width: 1px;
+    border-color: brown;
+    background-color: grey;
   }
 }
-
-/* Déplacer la barre de navigation */
