@@ -94,29 +94,60 @@ h1 {
   border-bottom-right-radius: 1em;
 }
 /* Icône de recherche */
-#logo_container {
+/*#logo_container {
   display: flex;
   align-items: center;
-  flex: 1 1 auto;
   background-color: #f2f2f2;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
   font-size: large;
-}
+}*/
 /* Bouton de recherche */
-#search_button {
+/*#search_button {
   display: flex;
-  flex: 3 1 auto;
-}
-button {
   background-color: #0065fc;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   color: white;
   font-weight: bold;
-}
+}*/
 /* Formulaire de recherche et son bouton */
-form {
-  flex: 6 1 auto;
-  align-items: stretch;
+/*#search_box{
+  align-self: stretch;
+}*/
+/* Filtres */
+#filtres {
+  display: flex;
+  align-items: center;
+}
+#filtres h2 {
+  font-size: large;
+}
+.filtre {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  border: solid #D2D2D2;
+}
+.filtre p {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: large;
+}
+.conteneur_logo {
+  color: #0065fc;
+  background-color: #deebff;
+  border-radius: 50%;
+  padding: 15px;
+}
+/* Résultats de la recherche */
+#resultats{
+  display: flex;
+  align-items: center;
+}
+#resultats p{
+  padding: 15px;
+}
+.fa-info-circle{
+  margin: 10px;
 }
