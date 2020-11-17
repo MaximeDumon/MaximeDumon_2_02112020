@@ -9,134 +9,114 @@
 }
 
 /* Pour la version en gras */
-@font-face{
+@font-face {
   font-family: "Raleway";
+  src: url("/polices/raleway/raleway-bold-webfont.eot")
+    format("embedded-opentype");
+  src: url("/polices/raleway/raleway-bold-webfont.svg") format("svg");
   src: url("/polices/raleway/raleway-bold-webfont.woff") format("woff");
+  src: url("/polices/raleway/Raleway-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
-/*Utilisation de la police dans tout le document */
-* {
+/*Utilisation de la police dans tout le document et centrage avec une largeur maximale
+pour assurer la cohérence de la page sur de très grandes définitions */
+html {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
+  width: 1440px;
+  border: solid;
+  margin: auto;
 }
 
-/* Breakpoint à utiliser en prenant l'iphone 8 comme référence: 400px */
-@media (max-width: 400px) {
-  #entete {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  /* Propriétés de la liste de navigation */
-  nav{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    background-color: blue;
-  }
-
-  ul {
-    display: flex;
-    width: 100%;
-    list-style-type: none;
-    justify-content: space-around;
-  }
-
-  li{
-    display: flex;
-    width: 100%;
-    align-items: center;
-  }
-
-  /* Selectionne uniquement les tags utilisés pour la navigation */
-  li a{
-    display: flex;
-    text-decoration: none;
-    width: 100%;
-    border-bottom: solid;
-    border-color: grey;
-  }
-  a:hover{
-    border-color: blue;
-  }
-
-  /* Passage de la barre de navigation sous le logo + lien d'inscription */
-  nav:nth-child(2) {
-    order: 3;
-  }
-
-  /* Titre du header */
-  h1{
-    font-size: x-large;
-    font-weight: bold;
-  }
-
-  /* Description et résultat de la recherche */
-  .description{
-    font-size: large;
-  }
-
-  /* Formulaire de recherche */
-  #recherche{
-    display: flex;
-    width: 100%;
-    border-style: groove;
-    justify-content: space-around;
-  }
-
-  .fa-map-marker-alt{
-    background-color: gray;
-    width: 20%;
-  }
-
-  input{
-    border-style: groove;
-    border-width: 1px;
-    width: 80%;
-  }
-
-  /* Filtres */
-  h2{
-    font-size: medium;
-  }
-
-  #filtres{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .filtre{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    font-weight: bold;
-    border-radius: 2em;
-    border-style: groove;
-    border-width: 2px;
-    margin: 5px 10px 5px 10px;
-  }
-
-  .filtre p{
-    margin: 10px 20px 10px 20px;
-  }
-
-  .fas{
-    background-color: #0065FC;
-  }
-
-  /* Bandeau d'information / résultats de la recherche */
-  #resultats{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-  }
+/* Pour que le contenu ne soit pas collé aux bordures de la page */
+body {
+  padding: 40px;
 }
-
-/* Déplacer la barre de navigation */
+/* Entête contenant le logo, la barre de navigation et le bouton s'inscrire */
+#entete {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Pour la version desktop on modifie l'ordre des éléments d'entête pour mettre le bonton inscription en troisième position */
+#inscription:nth-child(2) {
+  order: 3;
+}
+#logo {
+  flex: 11 1 auto;
+}
+/* Barre de navigation */
+nav {
+  flex: 2 1 auto;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+/* Lien d'inscription */
+#inscription {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+/* Modification des liens de navigation */
+.lien_nav {
+  text-decoration: none;
+}
+.hebergement {
+  color: #0065fc;
+}
+.activites {
+  color: black;
+}
+/* Modification du lien d'inscription */
+.lien_inscription {
+  color: #0065fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Titre princpal */
+h1 {
+  font-size: 1.4em;
+}
+/* Barre de recherche */
+#recherche {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f2f2f2;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+/* Icône de recherche */
+#logo_container {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  background-color: #f2f2f2;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  font-size: large;
+}
+/* Bouton de recherche */
+#search_button {
+  display: flex;
+  flex: 3 1 auto;
+}
+button {
+  background-color: #0065fc;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  color: white;
+  font-weight: bold;
+}
+/* Formulaire de recherche et son bouton */
+form {
+  flex: 6 1 auto;
+  align-items: stretch;
+}

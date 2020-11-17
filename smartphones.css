@@ -1,0 +1,113 @@
+/* Breakpoint à utiliser en prenant l'iphone 8 comme référence: 375px */
+@media (max-width: 1440px) {
+  /* Entete contenant le logo, le lien d'inscription et la barre de navigation */
+  header {
+    padding: 10px 10px 10px 10px;
+  }
+  #entete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  #logo {
+    flex: auto;
+  }
+  #inscription {
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+  }
+  nav {
+    display: flex;
+    width: 100%;
+  }
+  nav ul {
+    display: flex;
+    flex: auto;
+    list-style-type: none;
+    padding: 0%;
+  }
+  li {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+  }
+  /* Description avec le titre principal et le message d'acceuil */
+  h1 {
+    font-size: x-large;
+  }
+  #description {
+    font-size: medium;
+  }
+  /* Le formulaire de recherche */
+  #recherche {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  /* Icône de recherche */
+  .fa-map-marker-alt {
+    padding: 15px 15px 15px 15px;
+    background-color: #f2f2f2;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    flex: 1 1 auto;
+  }
+  /* Bouton de recherche */
+  form {
+    display: flex;
+  }
+  form input {
+    border: none;
+  }
+  button {
+    flex: 1 1 auto;
+    background-color: #0065fc;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  /* Les filtres */
+  #filtres {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #filtres h2 {
+    width: 100%;
+  }
+  .filtre {
+    display: flex;
+    align-items: center;
+    margin: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: #f2f2f2;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .logo_filtre {
+    padding-right: 10px;
+    color: #0065fc;
+    background-color: orange;
+  }
+  .filtre p {
+    font-weight: bold;
+  }
+  /* Le résulat de la recherche */
+  #resultats {
+    /* A supprimer */
+    border-style: solid;
+    border-width: 1px;
+    border-color: brown;
+    background-color: grey;
+  }
+}
