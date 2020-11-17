@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="max-width:1440px" href="smartphones.css" />
     <!-- Utilisation de la librairie Font Awesome pour les icônes -->
     <script
       src="https://kit.fontawesome.com/fdd83998d8.js"
@@ -42,13 +43,18 @@
       </div>
       <!-- Barre de recherche -->
       <div id="recherche">
-        <i class="fas fa-map-marker-alt"></i>
+        <div id="logo_container">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
         <!-- Formulaire de recherche, le champ 'name' est omis dans la mesure où rien ne sera effectivement envoyé -->
         <form action="#">
-          <input type="text" />
+          <p>
+            <input type="search" value="Marseilles, France" />
+          </p>
         </form>
-        <!-- Utilisation d'un bouton plutôt que d'un <input> pour pouvoir afficher l'icône plutôt que le texte lors d'un affichage sur mobile -->
-        <button type="button" value="Marseille, France">Rechercher</button>
+        <div id="search_button">
+          <button>Rechercher</button>
+        </div>
       </div>
       <!-- Filtres -->
       <div id="filtres">
