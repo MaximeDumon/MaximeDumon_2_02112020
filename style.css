@@ -24,6 +24,85 @@
   font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
+/* Breakpoint à utiliser pour les écrans desktop en prenant la taille de la maquette: 1440px */
+@media (min-width: 1440px) {
+  /* Afin de maintenir une cohérence vis-à-vis de la maquette et éviter d'éventuels comportements étranges sur de très grandes définitions */
+  body {
+    width: 1360px;
+    margin-top: 0;
+    padding: 40px 40px 40px 40px;
+  }
+  /* Entête contenant le logo, la barre de navigation et le bouton s'inscrire */
+  #entete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* Pour la version desktop on modifie l'ordre des éléments d'entête pour mettre le bonton inscription en troisième position */
+  #inscription:nth-child(2) {
+    order: 3;
+  }
+  #logo {
+    flex: 11 1 auto;
+  }
+  /* Barre de navigation */
+  nav {
+    flex: 2 1 auto;
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    justify-content: space-around;
+  }
+  /* Lien d'inscription */
+  #inscription {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+  }
+  /* Modification des liens de navigation */
+  .lien_nav {
+    text-decoration: none;
+  }
+  .hebergement {
+    color: #0065fc;
+  }
+  .activites {
+    color: black;
+  }
+  /* Modification du lien d'inscription */
+  .lien_inscription {
+    color: #0065fc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* Titre princpal */
+  h1 {
+    font-size: 1.4em;
+  }
+  /* Barre de recherche */
+  #recherche {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+  /* Icône de recherche */
+  .fa-map-marker-alt {
+    padding: 15px 20px 15px 15px;
+    background-color: #f2f2f2;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+  }
+}
+
 /* Breakpoint à utiliser en prenant l'iphone 8 comme référence: 375px */
 @media (max-width: 375px) {
   /* Entete contenant le logo, le lien d'inscription et la barre de navigation */
