@@ -177,16 +177,39 @@ form p {
 #resultats p {
   padding: 15px;
 }
-.fa-info-circle {
-  margin: 10px;
-}
 /* Contenu de la page: hébergements, activités et populaires */
-#contenu {
-  display: flex;
-  flex-wrap: wrap;
-}
 #hebergements {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   background-color: #f2f2f2;
+  border-radius: 25px;
+}
+#hebergements h2 {
+  width: 100%;
+}
+#hebergements p {
+  width: 100%;
+}
+figure {
+  background-color: white;
+  border: solid white 5px;
+  border-radius: 15px;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: solid white 1px;
+  border-radius: 15px 15px 0px 0px;
+}
+figcaption {
+  border: solid;
+  background-color: white;
+}
+figcaption em {
+  font-style: normal;
+  font-weight: bold;
+}
+.nom_hotel {
+  font-weight: bold;
 }
