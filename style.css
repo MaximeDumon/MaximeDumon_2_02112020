@@ -85,36 +85,45 @@ h1 {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #f2f2f2;
-  border-top-left-radius: 1em;
-  border-bottom-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
 }
 /* Icône de recherche */
-/*#logo_container {
+#logo_container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   background-color: #f2f2f2;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
   font-size: large;
-}*/
+}
 /* Bouton de recherche */
-/*#search_button {
+#search_button {
   display: flex;
+  justify-content: center;
   background-color: #0065fc;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   color: white;
   font-weight: bold;
-}*/
+  width: 130px;
+}
 /* Formulaire de recherche et son bouton */
-/*#search_box{
-  align-self: stretch;
-}*/
+form p {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#search_box {
+  box-sizing: border-box;
+  height: 100%;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  border: solid #f2f2f2 1px;
+}
 /* Filtres */
 #filtres {
   display: flex;
@@ -126,28 +135,58 @@ h1 {
 .filtre {
   display: flex;
   align-items: center;
-  margin: 20px;
-  border: solid #D2D2D2;
+  justify-content: stretch;
+  margin: 30px;
+  height: 50px;
+  padding-right: 3px;
+  background-color: #f2f2f2;
+  border-radius: 25px;
+}
+.cache {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  background-color: white;
+  border-radius: 25px;
 }
 .filtre p {
+  display: flex;
+  align-items: center;
   font-weight: bold;
   text-transform: capitalize;
   font-size: large;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .conteneur_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #0065fc;
+  font-size: large;
   background-color: #deebff;
   border-radius: 50%;
-  padding: 15px;
+  width: 50px;
+  height: 50px;
 }
 /* Résultats de la recherche */
-#resultats{
+#resultats {
   display: flex;
   align-items: center;
 }
-#resultats p{
+#resultats p {
   padding: 15px;
 }
-.fa-info-circle{
+.fa-info-circle {
   margin: 10px;
+}
+/* Contenu de la page: hébergements, activités et populaires */
+#contenu {
+  display: flex;
+  flex-wrap: wrap;
+}
+#hebergements {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
 }
