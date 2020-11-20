@@ -18,28 +18,74 @@
     <header>
       <!-- L'entête contient le logo, la barre de navigation et le lien vers la page d'inscription -->
       <div id="entete">
-        <div id="logo">Logo</div>
-        <nav id="navigation">Navigation</nav>
-        <div id="inscription">Inscription</div>
+        <div id="logo">
+          <img src="/images/logo/Reservia.svg" alt="Logo Réservia" />
+        </div>
+        <nav id="navigation">
+          <ul>
+            <li>
+              <a id="lien_hebergement" href="#hebergements">Hébergements</a>
+            </li>
+            <li><a href="#activites">Activités</a></li>
+          </ul>
+        </nav>
+        <!-- Pas de lien vers une page d'inscription étant donné que c'est une maquette -->
+        <div id="inscription"><a href="#">S'inscrire</a></div>
       </div>
       <!-- Titres et description du site -->
-      <div id="titres">Titres</div>
+      <div id="titres">
+        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p>En plein centre ville ou en pleine nature</p>
+      </div>
       <!-- Tout ce qui concerne le formulaire de recherche -->
-      <div id="recherche">Recherche</div>
+      <div id="recherche">
+        <div>Icône</div>
+        <div>Champ de saisie</div>
+        <div>Bouton rechercher</div>
+      </div>
       <!-- Les différents filtres applicables aux résultats de la recherche -->
-      <div id="filtres">Filtres</div>
+      <div id="filtres">
+        <h3>Filtres</h3>
+        <div>Economique</div>
+        <div>Familial</div>
+        <div>Romantique</div>
+        <div>Animaux autorisés</div>
+      </div>
       <!-- Informations concernant le nombre de résultats disponibles -->
-      <div id="resultats">Résultats</div>
+      <div id="resultats">
+        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+      </div>
     </header>
     <main>
-      <section id="hebergements"></section>
-      <section id="populaires"></section>
-      <section id="activites"></section>
+      <section id="hebergements">
+        <h2>Hébergements à Marseille</h2>
+        <figure class="carte_hebergement">Figure 1</figure>
+        <figure class="carte_hebergement">Figure 2</figure>
+        <figure class="carte_hebergement">Figure 3</figure>
+        <figure class="carte_hebergement">Figure 4</figure>
+        <figure class="carte_hebergement">Figure 5</figure>
+        <figure class="carte_hebergement">Figure 6</figure>
+      </section>
+      <section id="populaires">
+        <h2>Les plus populaires</h2>
+        <figure class="carte_populaire">Figure 1</figure>
+        <figure class="carte_populaire">Figure 2</figure>
+        <figure class="carte_populaire">Figure 3</figure>
+      </section>
+      <section id="activites">
+        <h2>Activités</h2>
+        <figure>Figure 1</figure>
+        <figure>Figure 2</figure>
+        <figure>Figure 3</figure>
+        <figure>Figure 4</figure>
+        <figure>Figure 5</figure>
+        <figure>Figure 6</figure>
+      </section>
     </main>
     <footer>
-      <div class="infos_footer info1"></div>
-      <div class="infos_footer info2"></div>
-      <div class="infos_footer"></div>
+      <div class="infos_footer">A propos</div>
+      <div class="infos_footer">Nos hébergements</div>
+      <div class="infos_footer">Assistance</div>
     </footer>
   </body>
 </html>
