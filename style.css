@@ -24,12 +24,11 @@ pour assurer la cohérence de la page sur de très grandes définitions */
 html {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   width: 1440px;
-  border: solid;
   margin: auto;
+  padding: none;
 }
 
-/* Pour que le contenu ne soit pas collé aux bordures de la page */
-body {
+header {
   padding: 40px;
 }
 /* Entête contenant le logo, la barre de navigation et le bouton s'inscrire */
@@ -177,6 +176,10 @@ form p {
 #resultats p {
   padding: 15px;
 }
+/* Pour que le contenu ne soit pas collé aux bordures de la page */
+#contenu {
+  padding: 40px;
+}
 /* Contenu de la page: hébergements, activités et populaires */
 #hebergements {
   display: flex;
@@ -197,8 +200,6 @@ figure {
   border-radius: 15px;
 }
 figure img {
-  max-width: 100%;
-  height: auto;
   border: solid white 1px;
   border-radius: 15px 15px 0px 0px;
 }
@@ -212,4 +213,24 @@ figcaption em {
 }
 .nom_hotel {
   font-weight: bold;
+}
+/* Footer */
+footer {
+  display: flex;
+  background-color: #f2f2f2;
+}
+.info_footer {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  list-style-type: none;
+  padding-left: 40px;
+}
+.info_footer li {
+  padding: 10px;
+}
+.info_footer em {
+  font-size: large;
+  font-weight: bold;
+  font-style: normal;
 }
