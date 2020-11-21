@@ -55,6 +55,9 @@ header {
 li a {
   text-decoration: none;
 }
+li a:visited {
+  color: black;
+}
 #lien_hebergement a {
   color: #0065fc;
 }
@@ -73,12 +76,44 @@ li a {
 h1 {
   font-size: 1.4em;
 }
+/* Formulaire de recherche */
 #recherche {
   display: flex;
-  /* A supprimer */
-  border: solid;
-  background-color: blue;
 }
+#icone_recherche {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  background-color: #f2f2f2;
+  font-size: large;
+}
+form {
+  height: 100%;
+}
+#champ_saisie input {
+  height: 100%;
+  box-sizing: border-box;
+  border: solid 1px #f2f2f2;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  /* Pour une raison encore inconnue 'input' n'hérite pas de la police globale du body */
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+#bouton_recherche {
+  background-color: #0065fc;
+  color: white;
+  font-weight: bold;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Filtres */
 #filtres {
   display: flex;
   align-items: center;
@@ -86,8 +121,12 @@ h1 {
 .filtre {
   display: flex;
   align-items: center;
+  /* Pour éviter tout anamorphisme */
+  flex: none;
   border: solid 3px #f2f2f2;
   border-radius: 2em;
+  max-height: 50px;
+  margin: 1.5%;
 }
 .logo_filtre {
   width: 50px;
@@ -96,28 +135,49 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0065fc;
-  border: solid #0065fc;
+  background-color: #deebff;
+  border: solid #deebff;
+  color: #0065fc;
   /* Permet de superposer le logo par dessus la bordure du bloc filtre */
-  margin: -3px;
+  margin-left: -3px;
+}
+.label_filtre {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: large;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #resultats {
   display: flex;
   align-items: center;
-  /* A supprimer */
-  background-color: yellow;
+}
+#logo_resultats {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5%;
+  border: solid 1px #f2f2f2;
+  border-radius: 50%;
+  color: #0065fc;
+  font-size: small;
 }
 /* Contenu principal de la page */
 main {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: stretch;
+  /* A supprimer */
+  border: solid;
 }
 #hebergements {
   width: 70%;
@@ -142,10 +202,22 @@ h2 {
 /* Eléments du footer */
 footer {
   display: flex;
+  justify-content: flex-start;
   background-color: #f2f2f2;
 }
 .infos_footer {
-  width: 35%;
-  /* A supprimer */
-  border: solid;
+  width: 33%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.infos_footer h2 {
+  font-size: large;
+}
+.infos_footer ul {
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+.infos_footer ul li {
+  margin-top: 3%;
 }
