@@ -175,9 +175,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: stretch;
   /* A supprimer */
-  border: solid;
+  border: solid 1px;
 }
 #hebergements {
   width: 70%;
@@ -190,7 +189,7 @@ section {
 #activites {
   width: 100%;
 }
-h2 {
+section h2 {
   width: 100%;
 }
 .carte_hebergement {
@@ -206,7 +205,7 @@ footer {
   background-color: #f2f2f2;
 }
 .infos_footer {
-  width: 33%;
+  width: 35%;
   padding-left: 50px;
   padding-right: 50px;
 }
