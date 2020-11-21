@@ -31,49 +31,79 @@ header {
 }
 #entete {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 #logo {
-  width: 75%;
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
 }
 #navigation {
   width: 25%;
-  margin-right: 50px;
+  display: flex;
+  justify-content: center;
 }
 #navigation ul {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: space-around;
+  align-items: center;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 li a {
   text-decoration: none;
 }
-#lien_hebergement {
+#lien_hebergement a {
   color: #0065fc;
-}
-a:visited {
-  color: black;
 }
 #inscription {
   width: 10%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 #inscription a {
   font-weight: bold;
   text-decoration: none;
   color: #0065fc;
 }
+/* Titres */
+h1 {
+  font-size: 1.4em;
+}
 #recherche {
+  display: flex;
   /* A supprimer */
+  border: solid;
   background-color: blue;
 }
 #filtres {
-  /* A supprimer */
-  background-color: red;
+  display: flex;
+  align-items: center;
+}
+.filtre {
+  display: flex;
+  align-items: center;
+  border: solid 3px #f2f2f2;
+  border-radius: 2em;
+}
+.logo_filtre {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0065fc;
+  border: solid #0065fc;
+  /* Permet de superposer le logo par dessus la bordure du bloc filtre */
+  margin: -3px;
 }
 #resultats {
+  display: flex;
+  align-items: center;
   /* A supprimer */
   background-color: yellow;
 }

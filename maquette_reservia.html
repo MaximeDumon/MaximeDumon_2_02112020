@@ -23,8 +23,8 @@
         </div>
         <nav id="navigation">
           <ul>
-            <li>
-              <a id="lien_hebergement" href="#hebergements">Hébergements</a>
+            <li id="lien_hebergement">
+              <a href="#hebergements">Hébergements</a>
             </li>
             <li><a href="#activites">Activités</a></li>
           </ul>
@@ -39,20 +39,37 @@
       </div>
       <!-- Tout ce qui concerne le formulaire de recherche -->
       <div id="recherche">
-        <div>Icône</div>
-        <div>Champ de saisie</div>
-        <div>Bouton rechercher</div>
+        <div id="icone_recherche">Icône</div>
+        <div id="champ_saisie">
+          <form><input type="text" /></form>
+        </div>
+        <div id="bouton_recherche">
+          <input type="submit" value="Rechercher" />
+        </div>
       </div>
       <!-- Les différents filtres applicables aux résultats de la recherche -->
       <div id="filtres">
         <h3>Filtres</h3>
-        <div>Economique</div>
-        <div>Familial</div>
-        <div>Romantique</div>
-        <div>Animaux autorisés</div>
+        <div class="filtre">
+          <div class="logo_filtre">Icone</div>
+          <p class="label_filtre">économique</p>
+        </div>
+        <div class="filtre">
+          <div class="logo_filtre">Icone</div>
+          <p class="label_filtre">familial</p>
+        </div>
+        <div class="filtre">
+          <div class="logo_filtre">Icone</div>
+          <p class="label_filtre">romantique</p>
+        </div>
+        <div class="filtre">
+          <div class="logo_filtre">Icone</div>
+          <p class="label_filtre">animaux autorisés</p>
+        </div>
       </div>
       <!-- Informations concernant le nombre de résultats disponibles -->
       <div id="resultats">
+        <div id="logo_resultats">Logo</div>
         <p>Plus de 500 logements sont disponibles dans cette ville</p>
       </div>
     </header>
