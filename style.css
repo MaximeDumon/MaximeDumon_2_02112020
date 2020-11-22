@@ -26,8 +26,7 @@ body {
   margin: auto;
 }
 header {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 50px 50px 0 50px;
 }
 #entete {
   display: flex;
@@ -79,6 +78,8 @@ h1 {
 /* Formulaire de recherche */
 #recherche {
   display: flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 #icone_recherche {
   width: 50px;
@@ -151,6 +152,7 @@ form {
 #resultats {
   display: flex;
   align-items: center;
+  margin-bottom: 2%;
 }
 #logo_resultats {
   height: 25px;
@@ -168,35 +170,74 @@ form {
 main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-left: 50px;
   padding-right: 50px;
 }
+/* Mise en forme globale des sections */
 section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  /* A supprimer */
-  border: solid 1px;
-}
-#hebergements {
-  width: 70%;
-  background-color: #d2d2d2;
-}
-#populaires {
-  width: 30%;
-  background-color: #d2d2d2;
-}
-#activites {
-  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px 15px 15px 15px;
+  box-sizing: border-box;
 }
 section h2 {
   width: 100%;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+figure {
+  background-color: white;
+  border: solid black;
+  border-radius: 15px 15px 15px 15px;
+  padding-left: 40px;
+}
+/* Mise en forme spécifiques des sections */
+#hebergements {
+  width: 66%;
+  background-color: #f2f2f2;
+}
+#hebergements p {
+  width: 100%;
+  font-weight: bold;
+  align-self: flex-start;
+  padding-left: 40px;
+}
+#populaires {
+  width: 31%;
+  background-color: #f2f2f2;
+}
+#bandeau_populaires {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 40px;
+}
+.fa-chart-line {
+  font-size: x-large;
+}
+#activites {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+#activites h2 {
+  padding-left: 0;
 }
 .carte_hebergement {
-  background-color: white;
+  width: 19%;
 }
 .carte_populaire {
-  background-color: white;
+  width: 100%;
+}
+.carte_activite {
+  width: 20%;
+}
+.carte_activite_haute {
+  width: 20%;
 }
 /* Eléments du footer */
 footer {
@@ -206,8 +247,7 @@ footer {
 }
 .infos_footer {
   width: 35%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 40px 50px 40px 50px;
 }
 .infos_footer h2 {
   font-size: large;
