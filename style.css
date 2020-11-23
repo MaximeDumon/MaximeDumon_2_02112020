@@ -1,4 +1,5 @@
-/* Définition de la police Raleway pour la version normale */
+/* Définition de la police Raleway */
+/* Version normale */
 @font-face {
   font-family: "Raleway";
   src: url("/polices/raleway/raleway-regular-webfont.eot")
@@ -8,7 +9,7 @@
   src: url("/polices/raleway/Raleway-Regular.ttf") format("truetype");
 }
 
-/* Pour la version en gras */
+/* Version en gras */
 @font-face {
   font-family: "Raleway";
   src: url("/polices/raleway/raleway-bold-webfont.eot")
@@ -18,219 +19,334 @@
   src: url("/polices/raleway/Raleway-Bold.ttf") format("truetype");
   font-weight: bold;
 }
-
-/*Utilisation de la police dans tout le document et centrage avec une largeur maximale
-pour assurer la cohérence de la page sur de très grandes définitions */
-html {
+body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   margin: auto;
-  padding: none;
 }
-
 header {
-  padding: 40px;
+  padding: 50px 50px 0 50px;
 }
-/* Entête contenant le logo, la barre de navigation et le bouton s'inscrire */
 #entete {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-/* Pour la version desktop on modifie l'ordre des éléments d'entête pour mettre le bonton inscription en troisième position */
-#inscription:nth-child(2) {
-  order: 3;
+  align-items: stretch;
 }
 #logo {
-  flex: 11 1 auto;
-}
-/* Barre de navigation */
-nav {
-  flex: 2 1 auto;
-}
-nav ul {
+  width: 65%;
   display: flex;
-  list-style-type: none;
-  justify-content: space-around;
-}
-/* Lien d'inscription */
-#inscription {
-  display: flex;
-  justify-content: center;
-  flex: 1 1 auto;
-}
-/* Modification des liens de navigation */
-.lien_nav {
-  text-decoration: none;
-}
-.hebergement {
-  color: #0065fc;
-}
-.activites {
-  color: black;
-}
-/* Modification du lien d'inscription */
-.lien_inscription {
-  color: #0065fc;
-  text-decoration: none;
-  font-weight: bold;
-}
-/* Titre princpal */
-h1 {
-  font-size: 1.4em;
-}
-/* Barre de recherche */
-#recherche {
-  display: flex;
-  align-items: stretch;
   justify-content: flex-start;
 }
-/* Icône de recherche */
-#logo_container {
+#navigation {
+  width: 25%;
   display: flex;
+  justify-content: center;
+}
+#navigation ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: #f2f2f2;
-  border-top-left-radius: 1em;
-  border-bottom-left-radius: 1em;
-  font-size: large;
-}
-/* Bouton de recherche */
-#search_button {
-  display: flex;
-  justify-content: center;
-  background-color: #0065fc;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
-  color: white;
-  font-weight: bold;
-  width: 130px;
-}
-/* Formulaire de recherche et son bouton */
-form p {
-  box-sizing: border-box;
-  height: 100%;
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
-#search_box {
-  box-sizing: border-box;
-  height: 100%;
+li a {
+  text-decoration: none;
+}
+li a:visited {
+  color: black;
+}
+#lien_hebergement a {
+  color: #0065fc;
+}
+#inscription {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#inscription a {
   font-weight: bold;
+  text-decoration: none;
+  color: #0065fc;
+}
+/* Titres */
+h1 {
+  font-size: 1.4em;
+}
+/* Formulaire de recherche */
+#recherche {
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+#icone_recherche {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  background-color: #f2f2f2;
   font-size: large;
+}
+form {
+  height: 100%;
+}
+#champ_saisie input {
+  height: 100%;
+  box-sizing: border-box;
+  border: solid 1px #f2f2f2;
+  font-size: large;
+  font-weight: bold;
   text-align: center;
-  border: solid #f2f2f2 1px;
+  /* Pour une raison encore inconnue 'input' n'hérite pas de la police globale du body */
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+#bouton_recherche {
+  background-color: #0065fc;
+  color: white;
+  font-weight: bold;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /* Filtres */
 #filtres {
   display: flex;
   align-items: center;
 }
-#filtres h2 {
-  font-size: large;
-}
 .filtre {
   display: flex;
   align-items: center;
-  justify-content: stretch;
-  margin: 30px;
+  /* Pour éviter tout anamorphisme */
+  flex: none;
+  border: solid 3px #f2f2f2;
+  border-radius: 2em;
+  max-height: 50px;
+  margin: 1.5%;
+}
+.logo_filtre {
+  width: 50px;
   height: 50px;
-  padding-right: 3px;
-  background-color: #f2f2f2;
-  border-radius: 25px;
-}
-.cache {
-  display: flex;
-  align-items: center;
-  height: 45px;
-  background-color: white;
-  border-radius: 25px;
-}
-.filtre p {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  text-transform: capitalize;
-  font-size: large;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.conteneur_logo {
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0065fc;
-  font-size: large;
   background-color: #deebff;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  border: solid #deebff;
+  color: #0065fc;
+  /* Permet de superposer le logo par dessus la bordure du bloc filtre */
+  margin-left: -3px;
 }
-/* Résultats de la recherche */
+.label_filtre {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: large;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 #resultats {
   display: flex;
   align-items: center;
+  margin-bottom: 2%;
 }
-#resultats p {
-  padding: 15px;
+#logo_resultats {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5%;
+  border: solid 1px #f2f2f2;
+  border-radius: 50%;
+  color: #0065fc;
+  font-size: small;
 }
-/* Pour que le contenu ne soit pas collé aux bordures de la page */
-#contenu {
-  padding: 40px;
-}
-/* Contenu de la page: hébergements, activités et populaires */
-#hebergements {
+/* Contenu principal de la page */
+main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+/* Mise en forme globale des sections */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  background-color: #f2f2f2;
-  border-radius: 25px;
+  border-radius: 15px 15px 15px 15px;
+  box-sizing: border-box;
 }
-#hebergements h2 {
+section h2 {
   width: 100%;
-}
-#hebergements p {
-  width: 100%;
+  padding-left: 40px;
 }
 figure {
   background-color: white;
-  border: solid white 5px;
-  border-radius: 15px;
+  border: solid white 4px;
+  border-radius: 15px 15px 15px 15px;
 }
 figure img {
-  border: solid white 1px;
-  border-radius: 15px 15px 0px 0px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px 15px 15px 15px;
 }
-figcaption {
-  border: solid;
-  background-color: white;
-}
-figcaption em {
-  font-style: normal;
-  font-weight: bold;
-}
-.nom_hotel {
-  font-weight: bold;
-}
-/* Footer */
-footer {
-  display: flex;
-  background-color: #f2f2f2;
-}
-.info_footer {
+.description_carte {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  list-style-type: none;
-  padding-left: 40px;
+  justify-content: space-evenly;
 }
-.info_footer li {
-  padding: 10px;
+.description_carte h2 {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-size: medium;
 }
-.info_footer em {
-  font-size: large;
+.description_carte p {
+  margin: 0;
+  padding: 0;
+}
+.description_carte i {
+  color: #0065fc;
+  margin: 0;
+}
+.description_carte em {
   font-weight: bold;
   font-style: normal;
+}
+.score {
+  display: flex;
+}
+.fa-star {
+  font-size: small;
+}
+.etoile_pleine {
+  color: #0065fc;
+}
+.etoile_vide {
+  color: #f2f2f2;
+}
+/* Mise en forme spécifiques des sections */
+#hebergements {
+  width: 66%;
+  background-color: #f2f2f2;
+}
+#fin_section {
+  width: 100%;
+  font-weight: bold;
+  align-self: flex-start;
+  padding-left: 40px;
+}
+#populaires {
+  width: 31%;
+  background-color: #f2f2f2;
+}
+#bandeau_populaires {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 40px;
+}
+.fa-chart-line {
+  font-size: x-large;
+}
+#activites {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+.groupe_activites {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#activites h2 {
+  padding-left: 0;
+}
+.carte_hebergement {
+  width: 250px;
+  height: 190px;
+  margin: 0 1% 1% 1%;
+  position: relative;
+}
+.carte_hebergement figcaption {
+  box-sizing: border-box;
+  height: 40%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.carte_populaire {
+  width: 335px;
+  height: 135px;
+  margin-top: 3% 0 0 0;
+  position: relative;
+}
+.carte_populaire figcaption {
+  width: 60%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+.carte_activite {
+  width: 50%;
+  margin: 0;
+  position: relative;
+}
+.carte_activite_haute {
+  width: 50%;
+  height: 445px;
+  margin: 0;
+  position: relative;
+}
+.carte_activite figcaption {
+  height: 10%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.carte_activite_haute figcaption {
+  height: 10%;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* Eléments du footer */
+footer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #f2f2f2;
+}
+.infos_footer {
+  width: 35%;
+  padding: 40px 50px 40px 50px;
+}
+.infos_footer h2 {
+  font-size: large;
+}
+.infos_footer ul {
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+.infos_footer ul li {
+  margin-top: 3%;
 }
