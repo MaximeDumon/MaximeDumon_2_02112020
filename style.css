@@ -184,25 +184,83 @@ form {
 
 /* Règles applicables au main et ses composants */
 main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 2em 2em;
   /* A supprimer */
-  height: 700px;
-  background-color: cadetblue;
+}
+figure {
+  margin: 0;
+}
+section {
+  box-sizing: border-box;
+  border-radius: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  background-color: #f2f2f2;
+}
+.conteneur_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.titre_section {
+  width: 100%;
+  margin: 0;
+  font-size: 1.3em;
+}
+.carte_section {
+  border: solid white 5px;
+  border-radius: 1em;
+  margin-top: 2em;
+  object-fit: cover;
+  object-position: 0% 100%;
 }
 #hebergements {
-  width: 70%;
+  max-width: 65%;
   background-color: #f2f2f2;
-  /* A supprimer */
+}
+.cartes_hebergements {
+  width: 235px;
+  height: 190px;
+}
+#hebergements p {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 #populaires {
-  width: 30%;
-  background-color: #f2f2f2;
-  /* A supprimer */
+  max-width: 32%;
+  flex-direction: column;
+  justify-content: center;
+}
+#bandeau_populaires {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo_populaire {
+  font-size: x-large;
+}
+.cartes_populaires {
+  width: 100%;
+  height: 130px;
 }
 #activites {
-  width: 100%;
-  /* A supprimer */
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
   background-color: white;
+}
+.cartes_activites {
+  width: 250px;
+  height: 190px;
+}
+.carte_activite_haute {
+  height: 350px;
 }
 
 /* Règles applicables au footer et ses composants */
