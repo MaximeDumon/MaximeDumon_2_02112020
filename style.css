@@ -197,9 +197,6 @@ section {
   padding: 2em;
   background-color: #f2f2f2;
 }
-figure{
-  margin: 0;
-}
 .conteneur_section {
   display: flex;
   flex-wrap: wrap;
@@ -210,26 +207,72 @@ figure{
   margin: 0;
   font-size: 1.3em;
 }
+
+/* Règles de mise en forme des tags <figure> avec leurs images et <figcaption> */
 .carte_section {
+  border-radius: 1em;
+  margin: 1em 0 0 0;
+}
+img {
   border: solid white 5px;
   border-radius: 1em;
-  margin-top: 2em;
   object-fit: cover;
   object-position: 0% 100%;
 }
+.description_carte {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.5em;
+  background-color: white;
+}
+.description_carte h2 {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-size: medium;
+}
+.description_carte p {
+  padding: 0;
+  margin: 0;
+}
+.description_carte i {
+  color: #0065fc;
+}
+.description_carte em {
+  font-weight: bold;
+  font-style: normal;
+}
+.score {
+  display: flex;
+}
+.fa-star {
+  font-size: small;
+}
+.etoile_pleine {
+  color: #0065fc;
+}
+.etoile_vide {
+  color: #f2f2f2;
+}
+/* Fin des règles de mise en forme générale des tags <figure> avec leurs images et <figcaption> */
+
 #hebergements {
   max-width: 65%;
   background-color: #f2f2f2;
 }
-.cartes_hebergements {
+#fin_de_section {
+  width: 100%;
+  font-weight: bold;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+.cartes_hebergements img {
   width: 235px;
   height: 190px;
 }
-#hebergements p {
-  width: 100%;
-  font-weight: bold;
-  font-size: 1.1em;
-}
+
 #populaires {
   max-width: 32%;
   flex-direction: column;
@@ -244,7 +287,7 @@ figure{
 #logo_populaire {
   font-size: x-large;
 }
-.cartes_populaires {
+.cartes_populaires img {
   width: 100%;
   height: 130px;
 }
@@ -254,11 +297,11 @@ figure{
   padding-right: 0;
   background-color: white;
 }
-.cartes_activites {
+.cartes_activites img {
   width: 250px;
   height: 190px;
 }
-.carte_activite_haute {
+.carte_activite_haute img {
   height: 350px;
 }
 
