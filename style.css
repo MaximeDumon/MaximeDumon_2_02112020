@@ -23,7 +23,7 @@
 /* Règles applicables à tout le document */
 body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
   /* A supprimer */
   border: solid 1px black;
@@ -31,6 +31,8 @@ body {
 
 /* Règles applicables au header et ses composants */
 header {
+  display: flex;
+  flex-direction: column;
   margin: 0 2em 2em;
 }
 .element_header {
@@ -124,14 +126,17 @@ form {
 /* Règles spécifiques aux filtres */
 #filtres {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 #filtres h2 {
+  padding-top: 2em;
   padding-right: 2em;
   font-size: large;
 }
 .conteneur {
   display: flex;
+  padding-top: 2em;
 }
 #filtres .icone {
   width: 50px;
@@ -322,6 +327,9 @@ img {
 }
 .cartes_activites img,
 .carte_activite_haute img {
+  /* Pourquoi si j'enlève les tailles fixes, les images se placent tout en bas à l'extérieur de la figure ???? */
+  width: 125px;
+  height: 135px;
   border-bottom: none;
   border-radius: 1em 1em 0 0;
   object-fit: contain;
@@ -346,4 +354,24 @@ footer {
 }
 .section_footer ul li {
   padding: 0.5em 0;
+}
+
+/* Règles spécifiques pour les tailles d'écran type tablettes et en dessous */
+@media all and (max-width: 768px) {
+  /* Règles du main et de ses composants */
+  main {
+    flex-direction: column;
+  }
+  .conteneur_section {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .section_footer ul {
+    display: flex;
+  }
+  .section_footer ul li {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+  }
 }
