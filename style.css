@@ -22,8 +22,14 @@
 
 /* Règles applicables à tout le document */
 body {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  /* Pour conserver le style attendu pour le lien 'hébergements' */
+  margin-top: 0;
+}
+#main_container {
   max-width: 1440px;
+  width: 100%;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1em;
   margin: auto;
   /* A supprimer */
   border: solid 1px black;
@@ -199,95 +205,27 @@ section {
   border-radius: 1em;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 2em;
   background-color: #f2f2f2;
 }
-.conteneur_section {
+#hebergements {
+  max-width: 70%;
+}
+#populaires {
+  max-width: 30%;
+}
+#activites {
+  max-width: 100%;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  padding: 0;
+  margin-top: 2em;
+  background-color: white;
 }
 .titre_section {
   width: 100%;
-  margin: 0;
+  margin: 0 0 1em 0;
   font-size: 1.3em;
-}
-
-/* Règles de mise en forme des tags <figure> avec leurs images et <figcaption> */
-.carte_section {
-  display: flex;
-  margin: 1em 0 0 0;
-}
-img {
-  border: solid white 5px;
-  object-fit: cover;
-  object-position: 0% 100%;
-}
-.description_carte {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0.5em;
-  background-color: white;
-}
-.description_carte h2 {
-  width: auto;
-  margin: 0;
-  padding: 0;
-  font-size: medium;
-}
-.description_carte p {
-  padding: 0;
-  margin: 0;
-}
-.description_carte i {
-  color: #0065fc;
-}
-.description_carte em {
-  font-weight: bold;
-  font-style: normal;
-}
-.score {
-  display: flex;
-}
-.fa-star {
-  font-size: small;
-}
-.etoile_pleine {
-  color: #0065fc;
-}
-.etoile_vide {
-  color: #f2f2f2;
-}
-/* Fin des règles de mise en forme générale des tags <figure> avec leurs images et <figcaption> */
-
-#hebergements {
-  max-width: 65%;
-  background-color: #f2f2f2;
-}
-#fin_de_section {
-  width: 100%;
-  font-weight: bold;
-  padding: 0;
-  margin: 1em 0 0 0;
-}
-.cartes_hebergements {
-  flex-direction: column;
-}
-.cartes_hebergements img {
-  width: 235px;
-  height: 100px;
-  border-bottom: none;
-  border-radius: 1em 1em 0 0;
-}
-.cartes_hebergements .description_carte {
-  border-radius: 0 0 1em 1em;
-}
-#populaires {
-  max-width: 32%;
-  flex-direction: column;
-  justify-content: s;
 }
 #bandeau_populaires {
   width: 100%;
@@ -296,43 +234,40 @@ img {
   align-items: center;
 }
 #logo_populaire {
-  font-size: x-large;
+  font-size: 1.5em;
+  margin: 0 0 1em 0;
 }
-.cartes_populaires {
-  width: 100%;
+.carte_section {
+  max-width: 250px;
+  max-height: 200px;
+  margin: 0;
+  overflow: hidden;
 }
-.cartes_populaires img {
-  width: 125px;
-  height: 135px;
-  border-right: none;
-  border-radius: 1em 0 0 1em;
+.carte_section img {
+  max-width: 250px;
+  /*border-radius: 1em 1em 0 0;*/
 }
-.cartes_populaires .description_carte {
-  box-sizing: border-box;
-  width: 225px;
-  height: 100%;
-  border-radius: 0 1em 1em 0;
-}
-#activites {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+.description_carte {
+  max-height: 60px;
+  padding: 0.5em;
+  margin: 0;
+  border-radius: 0 0 1em 1em;
   background-color: white;
 }
-.cartes_activites,
-.carte_activite_haute {
-  max-width: 300px;
-  max-height: 350px;
-  flex-direction: column;
+.description_carte h2 {
+  margin: 0;
+  font-size: 1em;
 }
-.cartes_activites img,
-.carte_activite_haute img {
-  /* Pourquoi si j'enlève les tailles fixes, les images se placent tout en bas à l'extérieur de la figure ???? */
-  width: 125px;
-  height: 135px;
-  border-bottom: none;
-  border-radius: 1em 1em 0 0;
-  object-fit: contain;
+.description_carte p {
+  margin: 0;
+}
+.description_carte .score {
+  margin: 0;
+}
+#fin_section {
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 /* Règles applicables au footer et ses composants */
