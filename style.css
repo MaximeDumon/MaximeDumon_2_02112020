@@ -19,334 +19,294 @@
   src: url("/polices/raleway/Raleway-Bold.ttf") format("truetype");
   font-weight: bold;
 }
+
+/* Règles applicables à tout le document */
 body {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  /* Pour conserver le style attendu pour le lien 'hébergements' */
+  margin-top: 0;
+}
+#main_container {
   max-width: 1440px;
   width: 100%;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1em;
   margin: auto;
+  /* A supprimer */
+  border: solid 1px black;
 }
+
+/* Règles applicables au header et ses composants */
 header {
-  padding: 50px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em 2em;
 }
+.element_header {
+  margin-bottom: 1em;
+}
+
+/* Entête contenant le logo, la barre de navigation et le lien d'inscription */
 #entete {
   display: flex;
+  justify-content: space-between;
   align-items: stretch;
 }
-#logo {
+#entete .logo {
   width: 65%;
-  display: flex;
-  justify-content: flex-start;
+  margin: 2em 2em 2em 0;
 }
-#navigation {
-  width: 25%;
-  display: flex;
-  justify-content: center;
-}
-#navigation ul {
-  width: 100%;
+#conteneur_liens {
   display: flex;
   justify-content: space-around;
+}
+.liens {
+  display: flex;
   align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 2em;
+  padding-right: 2em;
 }
-li a {
+.liens a {
   text-decoration: none;
-}
-li a:visited {
   color: black;
 }
-#lien_hebergement a {
+
+/* Règles spécifiques pour différencier les liens */
+#lien_hebergement {
+  border-top: solid #0065fc;
+}
+#lien_hebergement a,
+#lien_inscription a {
   color: #0065fc;
 }
-#inscription {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#inscription a {
-  font-weight: bold;
-  text-decoration: none;
-  color: #0065fc;
-}
-/* Titres */
+
+/* Règles pour le titre et la description (qui garde ses propriétés par défaut) */
 h1 {
   font-size: 1.4em;
 }
-/* Formulaire de recherche */
+
+/* Règles spécifiques à la section 'recherche' */
 #recherche {
   display: flex;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  align-items: center;
 }
-#icone_recherche {
-  width: 50px;
-  height: 50px;
+#recherche .icone {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 1em;
-  border-bottom-left-radius: 1em;
+  width: 50px;
+  height: 50px;
+  border-radius: 1em 0 0 1em;
   background-color: #f2f2f2;
-  font-size: large;
+  /* A supprimer */
 }
 form {
-  height: 100%;
-}
-#champ_saisie input {
-  height: 100%;
-  box-sizing: border-box;
+  /* Permet de s'assurer que le fomrulaire prenne bien toute la hauteur disponible */
+  align-self: stretch;
   border: solid 1px #f2f2f2;
-  font-size: large;
-  font-weight: bold;
+}
+#champ_saisie {
+  height: 100%;
   text-align: center;
-  /* Pour une raison encore inconnue 'input' n'hérite pas de la police globale du body */
+  font-weight: bold;
+  font-size: large;
+  border: none;
+  /* Le tag <input> n'hérite pas de la police de ses parents */
   font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
-#bouton_recherche {
+#recherche #bouton {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  border-radius: 0 1em 1em 0;
   background-color: #0065fc;
-  color: white;
-  font-weight: bold;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
-  padding-left: 20px;
-  padding-right: 20px;
 }
-/* Filtres */
+#recherche #bouton p {
+  margin: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-weight: bold;
+  font-size: large;
+  color: white;
+}
+
+/* Règles spécifiques aux filtres */
 #filtres {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
-.filtre {
+#filtres h2 {
+  padding-top: 2em;
+  padding-right: 2em;
+  font-size: large;
+}
+.conteneur {
   display: flex;
-  align-items: center;
-  /* Pour éviter tout anamorphisme */
-  flex: none;
-  border: solid 3px #f2f2f2;
-  border-radius: 2em;
-  max-height: 50px;
-  margin: 1.5%;
+  padding-top: 2em;
 }
-.logo_filtre {
+#filtres .icone {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #deebff;
-  border: solid #deebff;
   color: #0065fc;
-  /* Permet de superposer le logo par dessus la bordure du bloc filtre */
-  margin-left: -3px;
+  border-radius: 50%;
+  background-color: #deebff;
 }
-.label_filtre {
+.texte {
+  box-sizing: border-box;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5em 0 2.5em;
+  border: solid 3px #f2f2f2;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: relative;
+  left: -25px;
+  z-index: -11;
   text-transform: capitalize;
   font-weight: bold;
   font-size: large;
-  padding-left: 10px;
-  padding-right: 10px;
 }
+.texte .not_capitalize {
+  text-transform: none;
+}
+
+/* Règles spécifiques aux résultats de la recherche */
 #resultats {
   display: flex;
   align-items: center;
-  margin-bottom: 2%;
 }
-#logo_resultats {
-  height: 25px;
+#icone_resultat {
   width: 25px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1.5%;
   border: solid 1px #f2f2f2;
   border-radius: 50%;
-  color: #0065fc;
+  margin: 0 1em 0 0;
   font-size: small;
+  color: #0065fc;
 }
-/* Contenu principal de la page */
+
+/* Règles applicables au main et ses composants */
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: 50px;
-  padding-right: 50px;
+  margin: 0 2em 2em;
 }
-/* Mise en forme globale des sections */
 section {
+  box-sizing: border-box;
+  border-radius: 1em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px 15px 15px 15px;
-  box-sizing: border-box;
-}
-section h2 {
-  width: 100%;
-  padding-left: 40px;
-}
-figure {
-  background-color: white;
-  border: solid white 4px;
-  border-radius: 15px 15px 15px 15px;
-}
-figure img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 15px 15px 15px 15px;
-}
-.description_carte {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.description_carte h2 {
-  width: auto;
-  margin: 0;
-  padding: 0;
-  font-size: medium;
-}
-.description_carte p {
-  margin: 0;
-  padding: 0;
-}
-.description_carte i {
-  color: #0065fc;
-  margin: 0;
-}
-.description_carte em {
-  font-weight: bold;
-  font-style: normal;
-}
-.score {
-  display: flex;
-}
-.fa-star {
-  font-size: small;
-}
-.etoile_pleine {
-  color: #0065fc;
-}
-.etoile_vide {
-  color: #f2f2f2;
-}
-/* Mise en forme spécifiques des sections */
-#hebergements {
-  width: 66%;
+  justify-content: space-between;
+  padding: 2em;
   background-color: #f2f2f2;
 }
-#fin_section {
-  width: 100%;
-  font-weight: bold;
-  align-self: flex-start;
-  padding-left: 40px;
+#hebergements {
+  max-width: 70%;
 }
 #populaires {
-  width: 31%;
-  background-color: #f2f2f2;
+  max-width: 30%;
+}
+#activites {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin-top: 2em;
+  background-color: white;
+}
+.titre_section {
+  width: 100%;
+  margin: 0 0 1em 0;
+  font-size: 1.3em;
 }
 #bandeau_populaires {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 40px;
 }
-.fa-chart-line {
-  font-size: x-large;
+#logo_populaire {
+  font-size: 1.5em;
+  margin: 0 0 1em 0;
 }
-#activites {
+.carte_section {
+  max-width: 250px;
+  max-height: 200px;
+  margin: 0;
+  overflow: hidden;
+}
+.carte_section img {
+  max-width: 250px;
+  /*border-radius: 1em 1em 0 0;*/
+}
+.description_carte {
+  max-height: 60px;
+  padding: 0.5em;
+  margin: 0;
+  border-radius: 0 0 1em 1em;
+  background-color: white;
+}
+.description_carte h2 {
+  margin: 0;
+  font-size: 1em;
+}
+.description_carte p {
+  margin: 0;
+}
+.description_carte .score {
+  margin: 0;
+}
+#fin_section {
   width: 100%;
-  margin-top: 1%;
-  margin-bottom: 3%;
+  font-size: 1em;
+  font-weight: bold;
 }
-.groupe_activites {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-#activites h2 {
-  padding-left: 0;
-}
-.carte_hebergement {
-  width: 250px;
-  height: 190px;
-  margin: 0 1% 1% 1%;
-  position: relative;
-}
-.carte_hebergement figcaption {
-  box-sizing: border-box;
-  height: 40%;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.carte_populaire {
-  width: 335px;
-  height: 135px;
-  margin-top: 3% 0 0 0;
-  position: relative;
-}
-.carte_populaire figcaption {
-  width: 60%;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  top: 0;
-}
-.carte_activite {
-  width: 50%;
-  margin: 0;
-  position: relative;
-}
-.carte_activite_haute {
-  width: 50%;
-  height: 445px;
-  margin: 0;
-  position: relative;
-}
-.carte_activite figcaption {
-  height: 10%;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.carte_activite_haute figcaption {
-  height: 10%;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-/* Eléments du footer */
+
+/* Règles applicables au footer et ses composants */
 footer {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  padding: 2em;
   background-color: #f2f2f2;
 }
-.infos_footer {
-  width: 35%;
-  padding: 40px 50px 40px 50px;
+.section_footer {
+  width: 33%;
 }
-.infos_footer h2 {
+.section_footer h2 {
   font-size: large;
 }
-.infos_footer ul {
-  height: 100%;
-  list-style-type: none;
+.section_footer ul {
   padding: 0;
+  list-style-type: none;
 }
-.infos_footer ul li {
-  margin-top: 3%;
+.section_footer ul li {
+  padding: 0.5em 0;
+}
+
+/* Règles spécifiques pour les tailles d'écran type tablettes et en dessous */
+@media all and (max-width: 768px) {
+  /* Règles du main et de ses composants */
+  main {
+    flex-direction: column;
+  }
+  .conteneur_section {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .section_footer ul {
+    display: flex;
+  }
+  .section_footer ul li {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+  }
 }
