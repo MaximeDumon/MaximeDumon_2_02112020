@@ -31,8 +31,6 @@ body {
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1em;
   margin: auto;
-  /* A supprimer */
-  border: solid 1px black;
 }
 
 /* Règles applicables au header et ses composants */
@@ -45,37 +43,68 @@ header {
   margin-bottom: 1em;
 }
 
-/* Entête contenant le logo, la barre de navigation et le lien d'inscription */
+/* Entête contenant le logo et les liens de navigation et inscription */
 #entete {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
 }
 #entete .logo {
-  width: 65%;
+  width: 70%;
   margin: 2em 2em 2em 0;
 }
-#conteneur_liens {
+nav {
+  width: 30%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
-.liens {
+#liens {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+#liens li {
+  display: flex;
+  align-items: stretch;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#liens li a {
   display: flex;
   align-items: center;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-.liens a {
-  text-decoration: none;
-  color: black;
 }
 
-/* Règles spécifiques pour différencier les liens */
-#lien_hebergement {
-  border-top: solid #0065fc;
+/* Règles spécifiques pour différencier les liens et leur comportement LVHA */
+#lien_hebergement a:link,
+#lien_activite a:link,
+#lien_inscription a:link {
+  text-decoration: none;
 }
-#lien_hebergement a,
-#lien_inscription a {
+#lien_hebergement a:link,
+#lien_activite a:link {
+  color: black;
+}
+#lien_inscription a:link {
+  color: #0065fc;
+  font-weight: bold;
+}
+#lien_hebergement a:visited,
+#lien_activite a:visited {
+  color: black;
+}
+#lien_inscription a:visited {
+  color: #0065fc;
+}
+#lien_hebergement:hover,
+#lien_activite:hover {
+  border-top: solid 5px #0065fc;
+}
+#lien_hebergement:hover > a,
+#lien_activite:hover > a {
   color: #0065fc;
 }
 
