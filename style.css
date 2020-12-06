@@ -21,16 +21,16 @@
 }
 
 /* Règles applicables à tout le document */
-body {
-  /* Pour conserver le style attendu pour le lien 'hébergements' */
-  margin-top: 0;
-}
 #main_container {
   max-width: 1440px;
   width: 100%;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1em;
   margin: auto;
+}
+.icone,
+#icone_resultat {
+  flex: none;
 }
 
 /* Règles applicables au header et ses composants */
@@ -127,7 +127,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: none;
   width: 50px;
   height: 50px;
   border-radius: 1em 0 0 1em;
@@ -465,5 +464,71 @@ footer {
   #lien_inscription {
     margin-right: 2em;
   }
+
+  /* Filtres */
+  #filtres > h2 {
+    width: 100%;
+    padding: 0;
+  }
+  .conteneur {
+    padding-top: 1em;
+  }
+
   /* Règles du main et de ses composants */
+  main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  #hebergements,
+  #populaires {
+    max-width: 100%;
+    padding: 1em;
+  }
+  #populaires,
+  #hebergements,
+  #activites {
+    justify-content: center;
+  }
+  #populaires {
+    order: -1;
+    border-radius: 0;
+  }
+  #hebergements {
+    background-color: white;
+  }
+  #activites {
+    padding: 1em;
+  }
+  .figure_populaires,
+  .figure_hebergements,
+  .figure_activites,
+  .figure_hebergements img,
+  .figure_activites img {
+    width: 335px;
+  }
+  .figure_populaires img {
+    width: 130px;
+  }
+  .figure_activites {
+    max-height: 190px;
+  }
+  .figure_activites img {
+    max-height: 145px;
+  }
+
+  /* Règles du footer */
+  footer {
+    flex-direction: column;
+  }
+  .section_footer {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .section_footer h2{
+    margin-top: 0;
+  }
+  .section_footer ul li{
+    padding: 0.3em;
+  }
 }
