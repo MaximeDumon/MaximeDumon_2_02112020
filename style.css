@@ -153,7 +153,8 @@ form {
   border-radius: 0 1em 1em 0;
   background-color: #0065fc;
 }
-#recherche #bouton p {
+#recherche #bouton::before {
+  content: "Rechercher";
   margin: 0;
   padding-left: 2em;
   padding-right: 2em;
@@ -465,6 +466,24 @@ footer {
     margin-right: 2em;
   }
 
+  /* Recherche */
+  #recherche #bouton {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    flex: none;
+    border-radius: 1em;
+    position: relative;
+    left: -25px;
+  }
+  #recherche #bouton::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f002";
+    font-weight: bold;
+    font-size: large;
+    padding: 0;
+    color: white;
+  }
   /* Filtres */
   #filtres > h2 {
     width: 100%;
@@ -525,10 +544,10 @@ footer {
     width: 100%;
     margin-bottom: 2em;
   }
-  .section_footer h2{
+  .section_footer h2 {
     margin-top: 0;
   }
-  .section_footer ul li{
+  .section_footer ul li {
     padding: 0.3em;
   }
 }
