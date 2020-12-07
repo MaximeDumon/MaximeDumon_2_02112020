@@ -180,7 +180,11 @@ form {
 }
 .conteneur {
   display: flex;
-  padding-top: 2em;
+  margin-top: 2em;
+}
+.conteneur:hover > .icone {
+  background-color: #0065fc;
+  color: #deebff;
 }
 .conteneur > figure {
   margin: 0;
