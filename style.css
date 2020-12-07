@@ -123,21 +123,25 @@ h1 {
   display: flex;
   align-items: center;
 }
-#recherche .icone {
+#recherche > .icone {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50px;
   height: 50px;
   border-radius: 1em 0 0 1em;
+  border: none;
+  margin: 0;
   background-color: #f2f2f2;
 }
 form {
   /* Permet de s'assurer que le formulaire prenne bien toute la hauteur disponible */
   align-self: stretch;
   border: solid 1px #f2f2f2;
+  border-right: none;
 }
 #champ_saisie {
+  width: 100%;
   height: 100%;
   text-align: center;
   font-weight: bold;
@@ -178,7 +182,10 @@ form {
   display: flex;
   padding-top: 2em;
 }
-#filtres .icone {
+.conteneur > figure {
+  margin: 0;
+}
+.conteneur > .icone {
   width: 50px;
   height: 50px;
   display: flex;
@@ -186,20 +193,21 @@ form {
   align-items: center;
   color: #0065fc;
   border-radius: 50%;
+  border: none;
   background-color: #deebff;
 }
-.texte {
+.conteneur .texte {
   box-sizing: border-box;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1.5em 0 2.5em;
-  border: solid 3px #f2f2f2;
+  padding: 0 0.5em 0 1.5em;
+  border: solid 2px #f2f2f2;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   position: relative;
-  left: -25px;
+  left: -20px;
   z-index: -11;
   text-transform: capitalize;
   font-weight: bold;
@@ -249,15 +257,20 @@ section {
   margin: 0 0 1em 0;
   font-size: 1.3em;
 }
-figure {
+section > figure,
+.colonne_activite > figure {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: solid 5px white;
   border-radius: 1em;
   margin: 0.5em 0;
+  box-shadow: -5px 5px 15px 15px #f2f2f2;
 }
-figure img {
+section > figure {
+  border: solid 5px white;
+}
+section > figure img,
+.colonne_activite > figure img {
   object-fit: cover;
 }
 figcaption {
@@ -362,18 +375,18 @@ figcaption em {
   background-color: white;
 }
 .colonne_activite {
-  max-height: 445px;
+  max-height: 460px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.figure_activites {
+  border: none;
 }
 .figure_activites,
 .figure_activites img,
 .figcaption_activites {
   width: 300px;
-}
-.figure_activites {
-  margin: 0;
 }
 #activite_colonne_1 .figure_activites,
 #activite_colonne_3 .figure_activites {
@@ -446,7 +459,7 @@ footer {
   }
   #entete > .logo {
     width: auto;
-    margin: 2em;
+    margin: 1em;
   }
   #entete > nav {
     width: 100%;
@@ -463,10 +476,19 @@ footer {
     border-bottom: solid 3px #0065fc;
   }
   #lien_inscription {
-    margin-right: 2em;
+    margin-right: 1em;
+  }
+  #titre_principal {
+    /* Permet d'aligner le titre avec le reste des éléments sans toucher à sa polive ni fixer une marge en pixels */
+    margin-left: 0.72em;
   }
 
   /* Recherche */
+  /* Pour s'assurer qu'il prenne bien le maximum de largeur disponible */
+  form {
+    max-width: 400px;
+    width: 100%;
+  }
   #recherche #bouton {
     width: 50px;
     height: 50px;
@@ -474,7 +496,7 @@ footer {
     flex: none;
     border-radius: 1em;
     position: relative;
-    left: -25px;
+    left: -20px;
   }
   #recherche #bouton::before {
     font-family: "Font Awesome 5 Free";
