@@ -456,7 +456,7 @@ footer {
   padding: 0.5em 0;
 }
 
-@media all and (min-width: 599px) and (max-width: 1110px) {
+@media all and (min-width: 599px) and (max-width: 1113px) {
   #entete .logo {
     width: auto;
   }
