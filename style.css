@@ -257,19 +257,25 @@ section {
   margin: 0 0 1em 0;
   font-size: 1.3em;
 }
-section > figure,
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+section figure,
 .colonne_activite > figure {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border-radius: 1em;
-  margin: 0.5em 0;
+  margin: 0.5em 0.5em;
   box-shadow: -5px 5px 15px 15px #f2f2f2;
 }
-section > figure {
+section figure {
   border: solid 5px white;
 }
-section > figure img,
+section figure img,
 .colonne_activite > figure img {
   object-fit: cover;
 }
@@ -338,8 +344,7 @@ figcaption em {
 
 /* Règles spécifiques à la section populaires */
 #populaires {
-  max-width: 29%;
-  min-width: 20%;
+  max-width: 30%;
 }
 #bandeau_populaires {
   width: 100%;
@@ -395,20 +400,20 @@ figcaption em {
   height: 445px;
 }
 #activite_colonne_2 .figure_activites {
-  min-height: 165px;
+  height: 165px;
 }
 #activite_colonne4 .figure_activites {
-  min-height: 195px;
+  height: 195px;
 }
 #activite_colonne_1 .figure_activites img,
 #activite_colonne_3 .figure_activites img {
   height: 390px;
 }
 #activite_colonne_2 .figure_activites img {
-  min-height: 110px;
+  height: 110px;
 }
 #activite_colonne_4 .figure_activites img {
-  min-height: 140px;
+  height: 140px;
 }
 .figcaption_activites {
   height: 55px;
