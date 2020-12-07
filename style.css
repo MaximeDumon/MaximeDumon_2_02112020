@@ -26,7 +26,6 @@
   width: 100%;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1em;
-  color: black;
   margin: auto;
 }
 .icone,
@@ -264,6 +263,7 @@ section {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 a:visited {
   color: black;
