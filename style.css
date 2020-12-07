@@ -339,6 +339,7 @@ figcaption em {
 /* Règles spécifiques à la section populaires */
 #populaires {
   max-width: 29%;
+  min-width: 20%;
 }
 #bandeau_populaires {
   width: 100%;
@@ -386,7 +387,8 @@ figcaption em {
 .figure_activites,
 .figure_activites img,
 .figcaption_activites {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
 }
 #activite_colonne_1 .figure_activites,
 #activite_colonne_3 .figure_activites {
@@ -441,8 +443,31 @@ footer {
   padding: 0.5em 0;
 }
 
-/* Règles spécifiques pour les tailles d'écran type tablettes et en dessous */
-@media all and (max-width: 768px) {
+@media all and (min-width: 599px) and (max-width: 1110px) {
+  #entete .logo {
+    width: auto;
+  }
+  main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0;
+  }
+  #hebergements,
+  #populaires {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .figure_activites {
+    /* Permet un rendu plus propre sur les basses résolutions en alignant côte à côte les activtés plutôt q'en colonne */
+    max-width: 280px;
+  }
+}
+
+/* Règles spécifiques pour les tailles d'écran type mobiles et en dessous */
+@media all and (max-width: 599px) {
   body {
     margin: 0;
   }
@@ -546,7 +571,8 @@ footer {
   .figure_activites,
   .figure_hebergements img,
   .figure_activites img {
-    width: 335px;
+    max-width: 335px;
+    width: 100%;
   }
   .figure_populaires img {
     width: 130px;
