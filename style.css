@@ -264,6 +264,7 @@ section {
 a {
   text-decoration: none;
   color: black;
+  max-width: 100%;
 }
 a:visited {
   color: black;
@@ -561,6 +562,7 @@ footer {
   #hebergements,
   #populaires {
     max-width: 100%;
+    width: 100%;
     padding: 1em;
   }
   #populaires,
@@ -571,6 +573,8 @@ footer {
   #populaires {
     order: -1;
     border-radius: 0;
+    align-items: center;
+
   }
   #hebergements {
     background-color: white;
